@@ -7,11 +7,6 @@ var staff = [
     avatar: 'https://c532f75abb9c1c021b8c-e46e473f8aadb72cf2a8ea564b4e6a76.ssl.cf5.rackcdn.com/2016/08/31/2gfb850rm6_Julie_Larsen_Maher_0100_California_Sea_Lion_Indy_close_up_SLP_BZ_03_08_12_hr.jpg'
   },
   {
-    name: ,
-    occupation: ,
-    avatar:
-  },
-  {
     name: 'Goldie',
     occupation:'Carrot Farmer',
     avatar: 'http://www.dogtrouble.co.uk/wp-content/uploads/2017/07/Dog-Health-Products-500x500.jpg'
