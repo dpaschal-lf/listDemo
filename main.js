@@ -47,32 +47,41 @@ function initializeApp(){
 function renderAllStaff( allStaff ){
 	for(var indexOfStaffMember=0; indexOfStaffMember<allStaff.length; indexOfStaffMember++){
 		var staffMember = allStaff[ indexOfStaffMember ];
-		renderOneStaff( staffMember );
+		//renderOneStaff( staffMember );
+		var a = function(){
+
+		}
+		
+		//a self-invoking anonymous function 	
+		(function(){
+			var member = staffMember;
+			var staffContainer = $("<div>" , {
+				'class': 'staffMember',
+				on: {
+					click: function(){
+						console.log(member);
+						showStaffDetails(member);
+					}
+				}
+			})
+		})()
+		staffContainer[0].STAFFmemberSTAFF = member;
+		var staffName = $("<div>",{
+			'class': 'name',
+			text: member.name
+		})
+		var staffOccupation = $("<div>",{
+			'class': 'occupation',
+			text: member.occupation
+		})
+		staffContainer.append(staffName, staffOccupation);
+		$("#staffList").append( staffContainer );
 	}
 }
 //create the dom elements for the staff member and put it in the #staffList.  use the existing html as your guide for how it should be formatted
 // add a click handler to the parent element for each staff member that changes the details in the #staffDetails element, according to the example there
 function renderOneStaff( member ){
-	var staffContainer = $("<div>" , {
-		'class': 'staffMember',
-		on: {
-			click: function(){
-				console.log(member);
-				showStaffDetails(member);
-			}
-		}
-	})
-	staffContainer[0].STAFFmemberSTAFF = member;
-	var staffName = $("<div>",{
-		'class': 'name',
-		text: member.name
-	})
-	var staffOccupation = $("<div>",{
-		'class': 'occupation',
-		text: member.occupation
-	})
-	staffContainer.append(staffName, staffOccupation);
-	$("#staffList").append( staffContainer );
+
 
 }
 /*
